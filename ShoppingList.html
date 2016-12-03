@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListApp">
+  <head>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js">
+    </script>
+    <script src="ng-repeat.js"></script>
+    <title>ng-repeat Example</title>
+  </head>
+  <body>
+    <div ng-controller="ShoppingListController">
+      <h3>
+        ng-Repeat:
+      </h3>
+      <h2>
+        ShoppingList:
+      </h2>
+      <!-- <ul>
+        <li ng-repeat="item in ShoppingList1">{{$index+1}} .{{item}}
+        </li>
+      </ul> -->
+
+      <ul>
+        <li ng-repeat="item in ShoppingList2">{{$index+1}} . Buy {{item.quantity}}
+          Nbr of {{item.name}}
+        </li>
+      </ul>
+
+      <input type="text" placeholder="Item" ng-model="itemName"></input>
+      <input type="text" placeholder="Quantity" ng-model="itemQuantity"></input>
+      <button ng-click="PushItem()"> Add Item to ShoopingList</button>
+      <button ng-click="RemoveItem4()">Delete Item 4</button>
+    </div>
+
+  </body>
+</html>

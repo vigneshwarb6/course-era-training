@@ -12,7 +12,7 @@
       <div>
         My Name is:
         <input type="text" ng-model="name"
-        ng-keydown="displayNumeric();"/>
+        ng-keydown="displayNumeric();" ng-blur="ClearTotalValue();"/>
       </div>
       <div>
       The Total Numeric Value for My Name is

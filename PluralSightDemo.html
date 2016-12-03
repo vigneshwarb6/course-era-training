@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Plural Sight Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js">
+    </script>
+    <script src="script.js"></script>
+
+
+  </head>
+  <body ng-controller="PluralSController">
+    {{Message}}
+    <table><tr>First Name:{{Person.FirstName}}</tr>
+      <tr>Last Name:{{Person.LastName}}</tr>
+      <tr>
+<img ng-src="{{Person.Source}}" title="{{Person.FirstName}} + {{Person.LastName}} "/>
+        /<tr>
+    </table>
+  </body>
+</html>

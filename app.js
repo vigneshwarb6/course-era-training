@@ -8,6 +8,13 @@ $scope.totalValue=0;
 $scope.displayNumeric=function(){
   var totalCalcValue=calculateAscii($scope.name);
   $scope.totalValue=totalCalcValue;
+
+};
+
+$scope.ClearTotalValue=function(){
+  if($scope.name=""){
+    $scope.totalValue=0;
+  }
 };
 
 function calculateAscii(string){
