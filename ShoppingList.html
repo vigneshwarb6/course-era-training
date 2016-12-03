@@ -20,9 +20,9 @@
         <li ng-repeat="item in ShoppingList1">{{$index+1}} .{{item}}
         </li>
       </ul> -->
-
+<input type="text" ng-model="search"/>
       <ul>
-        <li ng-repeat="item in ShoppingList2">{{$index+1}} . Buy {{item.quantity}}
+        <li ng-repeat="item in ShoppingList2 | filter : search">{{$index+1}} . Buy {{item.quantity}}
           Nbr of {{item.name}}
         </li>
       </ul>
@@ -30,7 +30,7 @@
       <input type="text" placeholder="Item" ng-model="itemName"></input>
       <input type="text" placeholder="Quantity" ng-model="itemQuantity"></input>
       <button ng-click="PushItem()"> Add Item to ShoopingList</button>
-      <button ng-click="RemoveItem4()">Delete Item 4</button>
+      <button ng-click="RemoveItem4($index)">Delete Item 4</button>
     </div>
 
   </body>
